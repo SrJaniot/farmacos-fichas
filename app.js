@@ -34,7 +34,7 @@ const GUIAS = [
   { id: 'subcutanea', titulo: 'Vía subcutánea (paliativos)', texto: 'Normas, medicamentos aptos y posología por vía subcutánea.' },
 ];
 
-const AUTORA = 'Mariana Sandoval Padilla';
+const AUTORA = 'Enfermera PEP de urgencias Mariana Sandoval Padilla';
 
 const app = document.getElementById('app');
 
