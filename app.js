@@ -34,6 +34,8 @@ const GUIAS = [
   { id: 'subcutanea', titulo: 'Vía subcutánea (paliativos)', texto: 'Normas, medicamentos aptos y posología por vía subcutánea.' },
 ];
 
+const AUTORA = 'Mariana Sandoval Padilla';
+
 const app = document.getElementById('app');
 
 // --UTILIDADES
@@ -95,6 +97,7 @@ function vistaInicio() {
       <p class="text-xs font-bold uppercase tracking-widest text-teal-700 dark:text-teal-400">Consulta rápida</p>
       <h1 class="mt-1 text-2xl font-bold text-slate-900 sm:text-3xl dark:text-white">¿Cómo se diluye y administra?</h1>
       <p class="mt-1 text-slate-600 dark:text-slate-400">Busque por nombre del medicamento, concentración o laboratorio.</p>
+      <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Herramienta elaborada por <strong class="text-slate-700 dark:text-slate-200">${esc(AUTORA)}</strong></p>
     </section>
 
     <div class="relative">
@@ -424,6 +427,7 @@ function guiaUso() {
         <p><strong>Abreviaturas frecuentes:</strong> SSN = solución salina normal 0,9 %; DAD = dextrosa en agua destilada; LR = lactato de Ringer; API / A.E.P.I. = agua estéril para inyección; T amb = temperatura ambiente; CVC = catéter venoso central.</p>
         <p><strong>Botón A+</strong>: agranda la letra (se repite el ciclo al pulsarlo varias veces).</p>
         <p>Puede guardar el enlace de una ficha o agregar la página a la pantalla de inicio del celular.</p>
+        <p class="border-t border-slate-200 pt-3 text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400">Herramienta elaborada por <strong>${esc(AUTORA)}</strong>, con base en la tabla de dilución de medicamentos de uso hospitalario.</p>
       </section>`,
   };
 }
@@ -441,8 +445,9 @@ function vistaNoEncontrada() {
 function pintarPie() {
   const f = estado.datos.fuente || {};
   document.getElementById('pie').innerHTML = `
+    <p class="text-base text-slate-700 dark:text-slate-200">Herramienta elaborada por <strong>${esc(AUTORA)}</strong></p>
     <p><strong class="text-slate-700 dark:text-slate-200">Fuente:</strong> ${esc(f.titulo || 'Tabla de dilución medicamentos de uso hospitalario')}${f.aprobado ? ` · ${esc(f.aprobado)}` : ''}.</p>
-    ${f.autores?.length ? `<p>Elaborado por ${esc(f.autores.join(', ').replace(/\.?$/, '.'))}</p>` : ''}
+    ${f.autores?.length ? `<p>Tabla elaborada por ${esc(f.autores.join(', ').replace(/\.?$/, '.'))}</p>` : ''}
     ${f.referencias?.length ? `<p>Referencias: ${f.referencias.map(r => enlazar(esc(r))).join(' · ')}</p>` : ''}
     <p>Datos tomados de «${esc(estado.datos.archivo_fuente)}», convertidos el ${esc(estado.datos.generado)}.</p>`;
 }

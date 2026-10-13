@@ -5,16 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fichas de dilución</title>
   <meta name="description" content="Buscador de fichas de dilución de medicamentos de uso hospitalario: dilución, estabilidad, compatibilidades, dosis y efectos secundarios.">
+  <meta name="author" content="Mariana Sandoval Padilla">
   <meta name="theme-color" content="#0f766e">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f766e'/%3E%3Cpath d='M13 6h6v3h-1v6.5l5.6 8.7A2.5 2.5 0 0 1 21.5 28h-11a2.5 2.5 0 0 1-2.1-3.8L14 15.5V9h-1z' fill='white'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body class="min-h-screen bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 antialiased">
 
-  <header class="sticky top-0 z-20 border-b border-slate-200 bg-white/90 backdrop-blur dark:border-slate-800 dark:bg-slate-900/90">
-    <div class="mx-auto flex max-w-5xl items-center gap-3 px-4 py-3">
+  <header class="z-20 sm:sticky sm:top-0 border-b border-slate-200 bg-white/90 backdrop-blur dark:border-slate-800 dark:bg-slate-900/90">
+    <div class="mx-auto flex max-w-5xl flex-wrap items-center gap-x-3 gap-y-3 px-4 py-3">
       <a href="#/" class="flex items-center gap-3 min-w-0" aria-label="Ir al inicio">
-        <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-teal-700 text-white">
+        <span class="hidden h-10 w-10 shrink-0 place-items-center sm:grid rounded-xl bg-teal-700 text-white">
           <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6.5L4.6 18.2A2 2 0 0 0 6.3 21h11.4a2 2 0 0 0 1.7-2.8L14 9.5V3"/><path d="M7.5 15h9"/></svg>
         </span>
         <span class="min-w-0">
@@ -22,7 +23,11 @@
           <span class="block truncate text-xs text-slate-500 dark:text-slate-400">Medicamentos de uso hospitalario</span>
         </span>
       </a>
-      <div class="ml-auto flex items-center gap-2">
+      <div class="order-last flex w-full items-center justify-center gap-4 rounded-xl bg-white px-3 py-1.5 sm:order-none sm:ml-auto sm:w-auto sm:px-2 dark:ring-1 dark:ring-slate-700">
+        <img src="img/logo-unab.png" alt="Universidad Autónoma de Bucaramanga (UNAB)" class="h-9 w-auto sm:h-10" width="449" height="305">
+        <img src="img/logo-bpso.png" alt="RNAO Best Practice Spotlight Organization Colombia (BPSO)" class="h-9 w-auto sm:h-10" width="540" height="188">
+      </div>
+      <div class="ml-auto flex items-center gap-2 sm:ml-0">
         <a href="#/guia/uso" class="hidden sm:inline-flex btn-suave">¿Cómo usarlo?</a>
         <button id="btn-letra" type="button" class="btn-suave font-bold" title="Cambiar tamaño de letra" aria-label="Cambiar tamaño de letra">A+</button>
       </div>
