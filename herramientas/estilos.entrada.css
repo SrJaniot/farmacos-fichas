@@ -1,0 +1,22 @@
+/* Fuente de estilos.css. Después de cambiar clases en index.html o app.js, regenerar con:
+   npm install (una vez) y npm run estilos */
+@import "tailwindcss";
+@source "../index.html";
+@source "../app.js";
+
+@layer components {
+  .btn-suave { @apply inline-flex items-center gap-1 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-sm text-slate-700 hover:border-teal-600 hover:text-teal-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:border-teal-400 dark:hover:text-teal-300; }
+  .chip { @apply inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm text-slate-700 hover:border-teal-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200; }
+  .chip-activo { @apply border-teal-700 bg-teal-700 text-white hover:border-teal-700 dark:border-teal-500 dark:bg-teal-600 dark:text-white; }
+  .tarjeta { @apply rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900; }
+  .etiqueta { @apply inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-xs font-semibold; }
+  .et-gris { @apply bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300; }
+  .et-azul { @apply bg-sky-100 text-sky-800 dark:bg-sky-950 dark:text-sky-300; }
+  .et-naranja { @apply bg-orange-100 text-orange-800 dark:bg-orange-950 dark:text-orange-300; }
+  .et-violeta { @apply bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-300; }
+  .et-verde { @apply bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300; }
+  .texto-excel { white-space: pre-line; overflow-wrap: anywhere; }
+  .tabla { @apply w-full text-left text-sm; }
+  .tabla th { @apply bg-slate-100 px-3 py-2 font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-200; }
+  .tabla td { @apply border-t border-slate-200 px-3 py-2 align-top dark:border-slate-800; }
+}

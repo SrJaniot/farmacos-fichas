@@ -1,0 +1,14 @@
+{
+  "name": "farmacos-fichas",
+  "private": true,
+  "description": "Fichas de dilución de medicamentos (sitio estático para GitHub Pages)",
+  "scripts": {
+    "datos": "py herramientas/convertir.py",
+    "estilos": "tailwindcss -i herramientas/estilos.entrada.css -o estilos.css --minify",
+    "servir": "py -m http.server 5507 --bind 127.0.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.1.11",
+    "tailwindcss": "4.1.11"
+  }
+}
