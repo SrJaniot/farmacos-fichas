@@ -36,14 +36,14 @@ const GUIAS = [
 
 // --AUTORAS DE LA HERRAMIENTA, EN EL ORDEN EN QUE SE MUESTRAN
 const AUTORAS = [
-  { nombre: 'Mariana Sandoval Padilla', cargo: '' },
+  { nombre: 'Mariana Sandoval Padilla', cargo: 'Enfermera PEP de Urgencias' },
   { nombre: 'Luna Mercedes Sandoval Silva', cargo: 'Enfermera PEP de Medicina Interna' },
 ];
 
-// "<strong>Mariana…</strong> y <strong>Luna…</strong>, Enfermera PEP…"
+// "<strong>Mariana…</strong>, Enfermera PEP de Urgencias; y <strong>Luna…</strong>, Enfermera PEP…"
 function autorasHtml() {
   const partes = AUTORAS.map(a => `<strong>${esc(a.nombre)}</strong>${a.cargo ? `, ${esc(a.cargo)}` : ''}`);
-  return partes.length > 1 ? `${partes.slice(0, -1).join('; ')} y ${partes[partes.length - 1]}` : partes[0];
+  return partes.length > 1 ? `${partes.slice(0, -1).join('; ')}; y ${partes[partes.length - 1]}` : partes[0];
 }
 
 const app = document.getElementById('app');
