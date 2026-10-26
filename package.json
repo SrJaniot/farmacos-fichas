@@ -5,7 +5,8 @@
   "scripts": {
     "datos": "py herramientas/convertir.py",
     "estilos": "tailwindcss -i herramientas/estilos.entrada.css -o estilos.css --minify",
-    "servir": "py -m http.server 5507 --bind 127.0.0.1"
+    "servir": "py -m http.server 5507 --bind 127.0.0.1",
+    "probar": "node herramientas/prueba-navegador.mjs capturas light"
   },
   "devDependencies": {
     "@tailwindcss/cli": "4.1.11",

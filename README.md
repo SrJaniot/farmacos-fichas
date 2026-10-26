@@ -27,7 +27,7 @@ Es un sitio estático (HTML, JS y CSS) publicado con **GitHub Pages**: no tiene 
 1. Reemplazar el archivo en `datos/fuente/` (o pasar la ruta como argumento).
 2. `py herramientas/convertir.py` (necesita `openpyxl`: `py -m pip install openpyxl`).
 3. Revisar lo que imprime: número de medicamentos y hojas ignoradas.
-4. Probar localmente con `npm run servir` → http://127.0.0.1:5507.
+4. Probar localmente con `npm run servir` → http://127.0.0.1:5507 y, en otra terminal, `npm run probar` (Edge sin interfaz: capturas en `capturas/`, revisa las 116 fichas y la consola).
 5. Hacer commit y push: GitHub Pages se actualiza solo en uno o dos minutos.
 
 El convertidor reconoce las etiquetas de cada hoja aunque estén escritas un poco distinto. Una hoja nueva de medicamento funciona sin tocar el código si sigue el mismo formato: nombre en la fila 2 y pares etiqueta → valor. Si tiene varias marcas lado a lado, cada una se vuelve una pestaña de la ficha.
